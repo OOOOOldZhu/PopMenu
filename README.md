@@ -14,6 +14,18 @@
 
 使用方法：<br>
 ```
+1,Add it in your root build.gradle at the end of repositories:
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+	    }
+}
+2,Add the dependency:
+dependencies {
+	        implementation 'com.github.OOOOOldZhu:PopMenu:1.2'
+}
+details please look the MainActivity.java	
 new ActionSheetDialog(context).show();
 new ActionSheetDialog(context).show();
 ```
@@ -24,35 +36,31 @@ new ActionSheetDialog(context).show();
 ```
 //(1)
 new ActionSheetDialog (context)
-.builder()
-.setTitle ("清空消息列表后，聊天记录依然保留，确定要清空消息列表？")
-.setCancelable (false)
-.setCanceledOnTouchOutside (false)
-.addSheetItem ("清空消息列表", ActionSheetDialog.SheetItemColor.Red
-	       , new ActionSheetDialog.OnSheetItemClickListener()
-{
-    @Override
-    public void onClick (int which)
-    {
+   .builder()
+   .setTitle ("清空消息列表后，聊天记录依然保留，确定要清空消息列表？")
+   .setCancelable (false)
+   .setCanceledOnTouchOutside (false)
+   .addSheetItem ("清空消息列表", ActionSheetDialog.SheetItemColor.Red, new ActionSheetDialog.OnSheetItemClickListener(){
+       @Override
+       public void onClick (int which){
 
-    }
-}).show();
+       }
+   })
+   .show();
 
 //(2)
 new ActionSheetDialog (context)
-.builder()
-.setTitle ("清空消息列表后，聊天记录依然保留，确定要清空消息列表？")
-.setCancelable (false)
-.setCanceledOnTouchOutside (false)
-.addSheetItem ("清空消息列表", ActionSheetDialog.SheetItemColor.Red
-	       , new ActionSheetDialog.OnSheetItemClickListener()
-{
-    @Override
-    public void onClick (int which)
-    {
+    .builder()
+    .setTitle ("清空消息列表后，聊天记录依然保留，确定要清空消息列表？")
+    .setCancelable (false)
+    .setCanceledOnTouchOutside (false)
+    .addSheetItem ("清空消息列表", ActionSheetDialog.SheetItemColor.Red, new ActionSheetDialog.OnSheetItemClickListener(){
+        @Override
+        public void onClick (int which){
 
-    }
-}).show();
+        }
+    })
+    .show();
 ```
 
 ```
